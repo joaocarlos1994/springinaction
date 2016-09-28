@@ -9,7 +9,11 @@ public class Spittle {
 	private final Date time;
 	private Double latitude;
 	private Double longitude;
-	
+
+	public Spittle(String message, Date time) {
+		this(null, message, time, null, null);
+	}
+
 	public Spittle(Long id, String message, Date time, Double latitude, Double longitude) {
 		super();
 		this.id = id;
@@ -38,7 +42,5 @@ public class Spittle {
 	public Double getLongitude() {
 		return longitude;
 	}
-	
-	
 
 }

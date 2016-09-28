@@ -9,9 +9,15 @@ import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
 
+import spittr.data.JdbcSpittleRepository;
+import spittr.web.HomeController;
+import spittr.web.SpitterController;
+import spittr.web.SpittleController;
+
 @Configuration
 @EnableWebMvc
-@ComponentScan("spittr.web")
+//@ComponentScan("spittr.web")
+@ComponentScan(basePackageClasses = {HomeController.class, SpittleController.class, SpitterController.class})
 public class WebConfig extends WebMvcConfigurerAdapter {
 
 	@Bean
